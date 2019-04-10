@@ -19,6 +19,8 @@ func Usecase(name string, action string) error {
 
 	iname := strcase.ToSnake(name) + "UsecaseInteractor"
 	f.Type().Id(iname).Struct()
+	f.Func().Id("New" + strcase.ToCamel(name) + "UsecaseInteractor").Params().Id(strcase.ToCamel(name) + "UsecaseInteractor").Block()
+
 	f.Func().Params(
 		Id("i").Id(iname),
 	).Id(strcase.ToCamel(action)).Params(
