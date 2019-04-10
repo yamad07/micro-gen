@@ -14,7 +14,8 @@ create entities/models/admin.go
 create entities/repositories/admin.go
 ```
 
-```controllers/user.go
+生成された`controllers/user.go`は以下。
+```
 package controllers
 
 type UserController interface {
@@ -22,6 +23,7 @@ type UserController interface {
 }
 ```
 
+生成された`usecases/user.go`は以下。
 ```usecases/user.go
 package usecases
 
