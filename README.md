@@ -1,5 +1,11 @@
 # micro-gen
-ispecのマイクロサービスで使われるクリーンアーキテクチャのためのコード生成CLIです。コマンドを叩けば各レイヤーの構造体、インターフェース、コンストラクターが生成されます。
+Code generation CLI for clean architecture used by microservices. When you run a command, structures, interfaces and constructors for each layer are generated.
+
+## Installation
+
+```
+go get -u github.com/ispec-inc/micro-gen
+```
 
 ## Usage
 ```
@@ -14,7 +20,8 @@ create entities/models/admin.go
 create entities/repositories/admin.go
 ```
 
-生成された`controllers/user.go`は以下。
+The generated `controllers/user.go` is below.
+
 ```controllers/user.go
 package controllers
 
@@ -23,7 +30,7 @@ type UserController interface {
 }
 ```
 
-生成された`usecases/user.go`は以下。
+The generated `usecases/user.go` is below.
 ```usecases/user.go
 package usecases
 
